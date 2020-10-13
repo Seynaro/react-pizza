@@ -1,10 +1,10 @@
-import React, {useState, useEffect, useRef} from "react";
+import React from "react";
 
 function SortPopup({items}) {
 
-    const [visiblePopup, setVisiblePopup] = useState(false)
-    const [activeItem, setActiveItem] = useState(0)
-    const sortRef = useRef()
+    const [visiblePopup, setVisiblePopup] = React.useState(false)
+    const [activeItem, setActiveItem] = React.useState(0)
+    const sortRef = React.useRef()
     const activeLabel = items[activeItem]
 
     const onSelectItem = (index) => {
@@ -22,7 +22,7 @@ function SortPopup({items}) {
         }
     }
 
-    useEffect(() => {
+    React.useEffect(() => {
         document.body.addEventListener('click', handleOutsideClick)
     }, [])
 
@@ -30,7 +30,7 @@ function SortPopup({items}) {
     return (
         <div ref={sortRef} className="sort">
             <div className="sort__label">
-                <svg
+                <svg className={visiblePopup ? 'rotated' : ''}
                     width="10"
                     height="6"
                     viewBox="0 0 10 6"
