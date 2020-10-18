@@ -19,7 +19,7 @@ function Home({items}) {
             <div className="content__items">
                 {
                     items.map(obj => <PizzaBlock {...obj}
-                    kei={obj.id}/>)
+                    key={obj.id}/>)
                 }
 
 
