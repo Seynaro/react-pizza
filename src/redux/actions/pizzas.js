@@ -1,4 +1,4 @@
-const setPizzas = (items) => ({
+export const setPizzasAC = (items) => ({
     type: 'SET_PIZZAS',
     payload: items,
 });
