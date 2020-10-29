@@ -26,7 +26,6 @@ const SortPopup = React.memo(function SortPopup({items}) {
         document.body.addEventListener('click', handleOutsideClick)
     }, [])
 
-
     return (
         <div ref={sortRef} className="sort">
             <div className="sort__label">
